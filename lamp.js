@@ -2,7 +2,7 @@ status="";
 objects=[];
 
 function preload(){
-bed= loadImage("bed.jpeg");
+bed= loadImage("lamp.jpg");
 }
 
 function setup(){
@@ -48,7 +48,7 @@ function gotResult(error,results){
         document.getElementById("status").innerHTML="Status: Objects Detected";
         objects=results;
         console.log(objects);
-        document.getElementById("objectsDetected").innerHTML="1/2 Objects Detected";
+        document.getElementById("objectsDetected").innerHTML="1/1 Objects Detected";
 
 
     }

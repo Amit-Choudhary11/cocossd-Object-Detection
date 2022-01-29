@@ -2,18 +2,18 @@ status="";
 objects=[];
 
 function preload(){
-bed= loadImage("bed.jpeg");
+bed= loadImage("couch.jpg");
 }
 
 function setup(){
-canvas = createCanvas(500,500);
-canvas.position(530,250);
+canvas = createCanvas(700,400);
+canvas.position(430,250);
 
 objectDetector= ml5.objectDetector("cocossd",modelLoaded);
 }
 
 function draw(){
-image(bed,0,0,500,500);
+image(bed,0,0,700,400);
 
 if(status != ""){
     for(i=0; i<objects.length; i++){
@@ -48,7 +48,7 @@ function gotResult(error,results){
         document.getElementById("status").innerHTML="Status: Objects Detected";
         objects=results;
         console.log(objects);
-        document.getElementById("objectsDetected").innerHTML="1/2 Objects Detected";
+        document.getElementById("objectsDetected").innerHTML="1/1 Objects Detected";
 
 
     }
